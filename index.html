@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>Caça-Palavras</title>
+</head>
+<body>
+    <script>
+        matriz = new Array;
+        matriz = [
+            ["P","","","","A","R","R","O","Z","","","","","",""],
+            ["A","","","","","","","","","","","","","",""],
+            ["S","","","","","F","","B","O","L","A","C","H","A",""],
+            ["T","","","","","E","","","","","","","","",""],
+            ["E","","","","","I","","","","","","","","",""],
+            ["L","","","","","J","","","","","","C","","",""],
+            ["","P","I","Z","Z","A","","","","","","O","","",""],
+            ["","","","","","O","","","","","","X","","",""],
+            ["","","","","","","","","","L","E","I","T","E",""],
+            ["","","","","","","","","","","","N","","",""],
+            ["","","","","","","","","","","","H","","",""],
+            ["","B","A","T","A","T","A","","","","","A","","",""],
+            ["","","","","","","","","","","","","","",""],
+            ["","","","","","","","","L","A","N","C","H","E",""],
+            ["","C","A","R","N","E","","","","","","","","",""],
+        ];
+
+        window.onload = function(){
+            for(let node of document.querySelectorAll("td")){
+                if(node.textContent != ""){
+                    node.className = "selected";
+                }
+                else{
+                    let charcode = Math.round(65 + Math.random() * 25)
+                    node.textContent = String.fromCharCode(charcode)
+                }
+            }
+        }
+
+        document.write("<h1>Caça palavras sobre comida</h1><table border='1' align='center'>");
+        for (linha = 0; linha < 15; linha++){
+            document.write("<tr>")
+            for(coluna = 0; coluna < 15; coluna++){
+                document.write("<td>" + matriz[linha][coluna] + "</td>");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>")
+        document.write("<h1>Palavras: Pastel, arroz, bolacha, lanche, carne, batata, leite, coxinha, feijao, pizza </h1><table border='1' align='center'>");
+    </script>
+</body>
+</html>

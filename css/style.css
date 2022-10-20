@@ -1,0 +1,22 @@
+body{
+    align-items: center;
+    text-align: center;
+    color: black;
+    font-size: 28px;    
+    background: #e6b3e6;
+}
+h1{
+    font-size: 30px;
+}
+table{
+    border-collapse: collapse;
+}
+td{
+    text-align: center;
+    border: 1px solid black;
+    width: 33px;
+    height: 33px;
+}
+td.selected{
+    background-color: #993399;
+}
